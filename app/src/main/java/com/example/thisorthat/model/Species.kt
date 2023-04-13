@@ -3,15 +3,12 @@ package com.example.thisorthat.model
 import java.util.jar.Attributes
 import kotlin.properties.Delegates
 
-abstract class Species {
+class Species {
     private lateinit var name : String
     private var speciesPBS = 0;
     private var speciesRBS = 0;
     private var speciesVBS = 0;
-    private var speciesPTHR = 0;
-    private var speciesRTHR = 0;
-    private var speciesVTHR = 0;
-    private var speciesGRT = 0;
+    private var speciesGRT = 0.0;
 
     public fun Species(speciesName: String){
         name = speciesName
@@ -27,16 +24,7 @@ abstract class Species {
     fun getSpeciesVBS() : Int {
         return speciesVBS
     }
-    fun getSpeciesPTHR() : Int {
-        return speciesPTHR
-    }
-    fun getSpeciesRTHR() : Int {
-        return speciesRTHR
-    }
-    fun getSpeciesVTHR() : Int {
-        return speciesVTHR
-    }
-    fun getSpeciesGRT() : Int {
+    fun getSpeciesGRT() : Double {
         return speciesGRT
     }
     fun setSpeciesPBS(speciesPBS : Int){
@@ -48,16 +36,7 @@ abstract class Species {
     fun setSpeciesVBS(speciesVBS : Int){
         this.speciesVBS = speciesVBS
     }
-    fun setSpeciesPTHR(speciesPTHR : Int){
-        this.speciesPTHR = speciesPTHR
-    }
-    fun setSpeciesRTHR(speciesRTHR : Int){
-        this.speciesRTHR = speciesRTHR
-    }
-    fun setSpeciesVTHR(speciesVTHR : Int){
-        this.speciesVTHR = speciesVTHR
-    }
-    fun setSpeciesGRT(speciesGRT : Int){
+    fun setSpeciesGRT(speciesGRT: Double){
         this.speciesGRT = speciesGRT
     }
 }
